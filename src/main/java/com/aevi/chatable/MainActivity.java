@@ -3,7 +3,7 @@
  * The sample code is provided “as is” and Wincor Nixdorf assumes no responsibility for errors or omissions of any kind out of the
  * use of such code by any third party.
  */
-package com.aevi.tothemovies;
+package com.aevi.chatable;
 
 import android.app.Activity;
 import android.app.AlertDialog;

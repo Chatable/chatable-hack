@@ -1,4 +1,4 @@
-package com.aevi.tothemovies;
+package com.aevi.chatable;
 
 public class DefaultCurrencyNotSetException extends RuntimeException {
 }
