@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>To The Movies!</title>
+
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,target-densitydpi=high-dpi"/>
+
+    <link rel="stylesheet" href="./css/pure-min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/app.css">
+</head>
+<body>
+
+<div id="app">
+    <header id="header">
+        <div class="logo"></div>
+    </header>
+    <div id="slider-viewport">
+        <div id="slider-wrapper">
+            <div class="slide" id="content">
+                <div class="center"><img src="./img/loading.gif" class="inner-center"></div>
+            </div>
+            <div class="slide" id="content-detail"></div>
+            <div class="slide" id="message"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/html" id="movie-template">
+    <h2>Movies playing tonight in our theater!</h2>
+    {{#movies}}
+    <article data-price="{{price}}" data-total="{{total}}" data-fee="{{fee}}"
+             data-currency="{{currency}}" data-movieid="{{id}}" data-title="{{title}}"
+             data-image="{{image}}" data-backdrop="{{backdrop}}">
+        <img src="{{image}}">
+    </article>
+    {{/movies}}
+</script>
+
+<script type="text/html" id="event-tickets-template">
+    <article>
+        <h2>{{title}}</h2>
+
+        <div class="image-box">
+            <img src="{{backdrop}}">
+        </div>
+        <div class="overview">
+            <img class="thumb" src="{{image}}">
+
+            <p>{{overview}}</p>
+        </div>
+
+        <table class="pure-table pure-table-horizontal">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>description</th>
+                <th>price</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Ticket</td>
+                <td>{{currency}}{{price}}</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Booking costs</td>
+                <td>{{currency}}{{fee}}</td>
+            </tr>
+
+            <tr class="total">
+                <td></td>
+                <td>Total</td>
+                <td>{{currency}}{{total}}</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="center">
+            <button id="buyticket" class="pure-button app-button inner-center">
+                <i class="icon-ticket icon-large"></i>
+                buy your ticket
+            </button>
+        </div>
+    </article>
+
+</script>
+
+<script type="text/html" id="thanks-template">
+    <h1>Thanks!</h1>
+    <p>Your ticket is being printed, have fun watching "{{title}}".</p>
+
+    <div class="center">
+        <button id="return-to-start" class="pure-button app-button inner-center">
+            <i class="icon-backward icon-large"></i>
+            back to the list
+        </button>
+    </div>
+</script>
+
+<script type="text/html" id="failure-template">
+    <h1>We are sorry</h1>
+    <p>Something went wrong with your payment and we can't print your ticket.</p>
+    <hr/>
+    <p>Status: {{status}}</p>
+    <p>Error Code: {{errorcode}}</p>
+    <hr/>
+
+    <div class="center">
+        <button id="return-to-start" class="pure-button app-button inner-center">
+            <i class="icon-backward icon-large"></i>
+            back to the list
+        </button>
+    </div>
+</script>
+
+<script type="text/html" id="load-error-template">
+    <h1>We are sorry</h1>
+    <p>The server seems to be down and we can't load any movie information</p>
+
+    <div class="center">
+        <button id="exit-app" class="pure-button app-button inner-center">
+            <i class="icon-backward icon-large"></i>
+            exit application
+        </button>
+    </div>
+</script>
+
+<script src="./js/jquery-2.0.3.min.js"></script>
+<script src="./js/jquery-ui.min.js"></script>
+
+<script src="./js/mustache-min.js"></script>
+<script src="./js/underscore-min.js"></script>
+<script src="./js/date-min.js"></script>
+<script src="./js/director.min.js"></script>
+<script src="./js/parseuri.js"></script>
+
+<script src="./js/app.js"></script>
+</body>
+
+</html>

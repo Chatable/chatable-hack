@@ -1,0 +1,138 @@
+body{
+  overflow-x: hidden;
+}
+
+#app{
+  margin: 0 auto;
+  padding: 0 2em;
+  max-width:800px;
+}
+
+#header {
+  position: fixed;
+  height: 65px;
+  width: 800px;
+  box-shadow: 0 4px 2px -2px gray;
+  z-index: 10000;
+  top:0px;
+
+  background: transparent url('../img/header-bg.png') top center no-repeat;
+}
+
+#header div.logo{
+  width: 270px;
+  height: 60px;
+  background-position: 10px 10px;
+  background-image: url('../img/tmdb-logo.png');
+  background-repeat: no-repeat;
+}
+
+#content, #content-detail, #message{
+  position: relative;
+}
+
+#content-detail, #message{
+  font-size:1.5em;
+}
+
+#slider-viewport{
+  padding-top: 80px;
+  width: 800px;
+  overflow: hidden;
+}
+
+.slide{
+  width: 800px;
+  overflow: hidden;
+  float: left;
+}
+
+/*
+ *  movie listing page styles
+ */
+
+#content > h2 {
+  padding-left:30px;
+}
+
+#content > article{
+  width :250px;
+  height:auto;
+  max-height: 300px;
+  float:left;
+
+  text-align:center;
+  line-height: 300px;
+}
+
+#content > article > img{
+  width:189px;
+  height:auto;
+  vertical-align: middle;
+  box-shadow: 5px 5px 5px #888888;  
+}
+
+/*
+ *  movie detail page styles
+ */
+#content-detail > article > h2{
+  line-height: 0.8em;
+  margin: 0.2em 0 0.4em 0;
+  padding: 0;
+  font-size: 1.2em;
+}
+
+#content-detail > article > div.image-box{
+  max-height:300px;
+  overflow: hidden;
+}
+
+#content-detail aricle > img{
+  width: 100%;
+}
+
+#content-detail div.overview{
+  margin-top: 10px;
+}
+
+#content-detail p{
+  padding-left: 140px;
+  min-height: 200px;
+}
+
+#content-detail img.thumb{
+  width:125px;
+  height:auto;
+  float:left;
+}
+
+table {
+  width: 100%;
+}
+
+tr th:last-child,
+tr td:last-child {
+  text-align: right;
+}
+
+.center{
+    display:inline-block;
+    position:relative;
+    left:50%;
+}
+
+.inner-center{
+  position:relative;
+  left:-50%;
+}
+
+.app-button{
+  margin-top: 20px;
+  background: #0084E0; 
+  color:#fff;
+  font-size: 250%;
+}
+
+.total{
+  font-weight: bold;
+}
