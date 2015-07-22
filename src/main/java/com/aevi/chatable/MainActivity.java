@@ -71,6 +71,7 @@ public class MainActivity extends Activity {
             }
         } catch(CompatibilityException e) {
             showExitDialog(e.getMessage() + "\nThis application will now exit.");
+            //kkk
             return;
         }
 
