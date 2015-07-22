@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.aevi.tothemovies"
+    package="com.aevi.chatable"
     android:versionCode="20"
     android:versionName="2.3.0">
 
@@ -37,5 +37,8 @@
     <meta-data
         android:name="ip-addresses"
         android:value="0.0.0.0/0" />
+
+
+    
 
 </manifest>
